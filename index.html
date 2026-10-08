@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#e6f7ef">
+  <meta name="description" content="Apri il pannello EBO protetto sul Mac di casa, anche quando sei fuori.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; connect-src 'self'; img-src 'none'; font-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <title>EBO, anche fuori casa</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="page">
+    <header class="brand" aria-label="EBO">
+      <span class="brand-mark" aria-hidden="true"><span></span><span></span></span>
+      <span>EBO</span>
+    </header>
+    <main>
+      <section class="entry" aria-labelledby="page-title">
+        <div class="entry-copy">
+          <h1 id="page-title">EBO, anche<br>fuori casa</h1>
+          <p class="intro">Il tuo punto di accesso al pannello protetto del Mac di casa.</p>
+          <div class="connection" role="status" aria-live="polite" aria-atomic="true">
+            <span class="connection-dot" aria-hidden="true"></span>
+            <span id="connection-state">Carico il collegamento…</span>
+          </div>
+          <a class="open-panel" id="open-panel" role="link" aria-disabled="true" aria-describedby="connection-detail" tabindex="-1">Apri il pannello protetto</a>
+          <p class="connection-detail" id="connection-detail">Attendi un momento mentre preparo il link.</p>
+        </div>
+        <div class="ebo-portrait" aria-hidden="true">
+          <div class="robot-shell">
+            <div class="robot-face">
+              <span class="eye eye-left"><i></i></span>
+              <span class="lens"></span>
+              <span class="eye eye-right"><i></i></span>
+            </div>
+            <span class="robot-name">ebo</span>
+          </div>
+          <div class="robot-feet"><span></span><span></span></div>
+        </div>
+      </section>
+      <section class="home-note" aria-labelledby="home-note-title">
+        <h2 id="home-note-title">Il Mac di casa deve restare acceso</h2>
+        <p>Mantienilo collegato a Internet, con il pannello aperto. La disponibilità viene confermata quando apri il pannello protetto.</p>
+      </section>
+      <noscript><p class="no-script">Per caricare il collegamento, attiva JavaScript nel browser e aggiorna questa pagina.</p></noscript>
+    </main>
+    <footer>Questa pagina è un ingresso al pannello. L’accesso avviene nel pannello protetto.</footer>
+  </div>
+</body>
+</html>

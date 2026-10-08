@@ -1,0 +1,70 @@
+:root {
+  color-scheme: light;
+  --mint: #e6f7ef;
+  --paper: #fbfefc;
+  --ink: #143c36;
+  --teal: #096d5c;
+  --muted: #4e6d64;
+  --gold: #e2b655;
+  font-family: "Avenir Next", Avenir, "Trebuchet MS", sans-serif;
+  color: var(--ink);
+  background: var(--mint);
+}
+* { box-sizing: border-box; }
+body { margin: 0; }
+.page { width: min(1080px, 100%); margin: auto; padding: 36px 46px 24px; }
+.brand { display: flex; align-items: center; gap: 11px; font-size: 23px; font-weight: 700; letter-spacing: -.04em; }
+.brand-mark { display: flex; gap: 5px; }
+.brand-mark span { width: 12px; height: 17px; border: 3px solid var(--teal); border-radius: 50%; }
+main { margin-top: 38px; }
+.entry { display: grid; grid-template-columns: 1.3fr 1fr; gap: 24px; align-items: center; min-height: 452px; }
+.entry-copy { position: relative; z-index: 1; }
+h1 { margin: 0; font-size: clamp(44px, 6.7vw, 74px); line-height: 1.04; font-weight: 700; letter-spacing: -.055em; }
+.intro { max-width: 370px; margin: 24px 0 28px; font-size: 20px; line-height: 1.55; }
+.connection { display: flex; align-items: center; gap: 9px; margin-bottom: 13px; font-size: 15px; font-weight: 600; }
+.connection-dot { width: 9px; height: 9px; background: #6f8278; border-radius: 50%; flex: 0 0 auto; }
+body[data-connection="available"] .connection-dot { background: var(--teal); }
+.open-panel { display: inline-flex; justify-content: center; align-items: center; min-height: 56px; padding: 15px 26px; border-radius: 18px; background: var(--teal); color: #fff; text-decoration: none; font-size: 17px; font-weight: 600; }
+.open-panel[aria-disabled="true"] { color: #3d6255; background: #cdded4; cursor: default; }
+.open-panel:focus-visible { outline: 3px solid var(--ink); outline-offset: 5px; }
+.open-panel[href]:hover { background: #07594b; }
+.connection-detail { margin: 14px 0 0; max-width: 365px; min-height: 44px; font-size: 14px; line-height: 1.6; color: var(--muted); }
+.ebo-portrait { position: relative; width: min(100%, 340px); height: 365px; justify-self: center; display: flex; align-items: center; justify-content: center; }
+.ebo-portrait::before { content: ""; position: absolute; inset: 5px 0 24px; border-radius: 48% 48% 36% 36%; background: #cceade; }
+.robot-shell { position: relative; z-index: 1; width: 258px; height: 280px; border: 2px solid #d6e5dc; background: var(--paper); border-radius: 49% 49% 38% 38%; transform: rotate(-5deg); }
+.robot-face { position: absolute; top: 76px; left: 12px; right: 12px; height: 138px; background: var(--ink); border-radius: 42% 42% 36% 36%; display: flex; align-items: center; justify-content: center; gap: 14px; }
+.eye { width: 56px; height: 70px; border-radius: 50%; background: var(--gold); border: 4px solid #fcdf9c; display: grid; place-items: center; }
+.eye i { position: relative; display: block; width: 30px; height: 43px; background: #13312d; border-radius: 50%; }
+.eye i::before { content: ""; position: absolute; top: 5px; left: 6px; width: 13px; height: 12px; border-radius: 50%; background: #fbfefc; }
+.lens { width: 26px; height: 26px; border: 5px solid #60847b; border-radius: 50%; background: #b4d2c6; }
+.robot-name { position: absolute; bottom: 16px; left: 0; right: 0; text-align: center; color: #6b8175; font-size: 18px; font-style: italic; }
+.robot-feet { position: absolute; bottom: 34px; display: flex; gap: 150px; transform: rotate(-5deg); }
+.robot-feet span { width: 25px; height: 21px; border-radius: 0 0 8px 8px; background: #57776a; }
+.home-note { display: grid; grid-template-columns: 1fr 1.25fr; gap: 36px; margin-top: 28px; padding: 29px 0; border-top: 1px solid #b8d6c6; border-bottom: 1px solid #b8d6c6; }
+h2 { margin: 0; font-size: 22px; line-height: 1.4; letter-spacing: -.025em; }
+.home-note p { margin: 0; max-width: 440px; font-size: 16px; line-height: 1.65; }
+footer { max-width: 650px; margin-top: 24px; font-size: 13px; line-height: 1.6; color: var(--muted); }
+.no-script { font-size: 15px; line-height: 1.6; }
+@media (max-width: 700px) {
+  .page { padding: 27px 24px 22px; }
+  main { margin-top: 38px; }
+  .entry { grid-template-columns: 1fr; gap: 20px; min-height: 0; }
+  h1 { font-size: clamp(43px, 10vw, 60px); }
+  .intro { font-size: 18px; margin: 20px 0 25px; }
+  .ebo-portrait { width: 250px; height: 260px; }
+  .robot-shell { width: 194px; height: 210px; }
+  .robot-face { top: 56px; left: 9px; right: 9px; height: 104px; gap: 10px; }
+  .eye { width: 42px; height: 54px; border-width: 3px; }
+  .eye i { width: 23px; height: 33px; }
+  .eye i::before { width: 10px; height: 9px; left: 4px; top: 4px; }
+  .lens { width: 22px; height: 22px; border-width: 4px; }
+  .robot-name { bottom: 11px; font-size: 15px; }
+  .robot-feet { bottom: 17px; gap: 112px; }
+  .robot-feet span { width: 20px; height: 17px; }
+  .home-note { grid-template-columns: 1fr; gap: 11px; margin-top: 20px; padding: 24px 0; }
+  h2 { max-width: 300px; font-size: 21px; }
+}
+@media (max-width: 350px) {
+  .page { padding-left: 18px; padding-right: 18px; }
+  .open-panel { width: 100%; font-size: 16px; padding-left: 15px; padding-right: 15px; }
+}
